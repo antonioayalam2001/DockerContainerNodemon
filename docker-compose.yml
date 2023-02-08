@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  api-dev:
+    build:
+      context: .
+      dockerfile: dev_image.Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      # you_local_path/:your_container_path/ which I bind to reflect changes to container
+      - ./src:/app/src
+    command: npm run dev
+  
+  monguito:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=nico
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mongo-data:/data/db
+      # mysql -> /var/lib/mysql
+      # postgres -> /var/lib/postgresql/data
+
+volumes:
+  mongo-data:

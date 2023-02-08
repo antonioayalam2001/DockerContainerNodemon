@@ -1,0 +1,37 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   'C:\\dev\\NodeJS\\node.exe',
+1 verbose cli   'C:\\Users\\tonya\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'docker-compose-down;',
+1 verbose cli   'npm',
+1 verbose cli   'run',
+1 verbose cli   'docker-compose-up:dev;',
+1 verbose cli   'docker-compose',
+1 verbose cli   'logs',
+1 verbose cli   '-f',
+1 verbose cli   'api-dev'
+1 verbose cli ]
+2 info using npm@2.15.12
+3 info using node@v19.5.0
+4 warn using --force I sure hope you know what you are doing.
+5 verbose stack Error: missing script: docker-compose-down;
+5 verbose stack     at run (C:\Users\tonya\node_modules\npm\lib\run-script.js:142:19)
+5 verbose stack     at C:\Users\tonya\node_modules\npm\lib\run-script.js:58:5
+5 verbose stack     at C:\Users\tonya\node_modules\npm\node_modules\read-package-json\read-json.js:356:5
+5 verbose stack     at checkBinReferences_ (C:\Users\tonya\node_modules\npm\node_modules\read-package-json\read-json.js:320:45)
+5 verbose stack     at final (C:\Users\tonya\node_modules\npm\node_modules\read-package-json\read-json.js:354:3)
+5 verbose stack     at then (C:\Users\tonya\node_modules\npm\node_modules\read-package-json\read-json.js:124:5)
+5 verbose stack     at C:\Users\tonya\node_modules\npm\node_modules\read-package-json\read-json.js:243:12
+5 verbose stack     at C:\Users\tonya\node_modules\npm\node_modules\read-package-json\node_modules\graceful-fs\graceful-fs.js:123:16
+5 verbose stack     at C:\Users\tonya\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:78:16
+5 verbose stack     at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read_file_context:68:3)
+6 verbose cwd C:\Users\tonya\Desktop\docker\node-development-dockerized
+7 error Windows_NT 10.0.22621
+8 error argv "C:\\dev\\NodeJS\\node.exe" "C:\\Users\\tonya\\node_modules\\npm\\bin\\npm-cli.js" "run" "docker-compose-down;" "npm" "run" "docker-compose-up:dev;" "docker-compose" "logs" "-f" "api-dev"
+9 error node v19.5.0
+10 error npm  v2.15.12
+11 error missing script: docker-compose-down;
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
